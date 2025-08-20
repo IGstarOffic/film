@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм "Фишер" - Онлайн просмотр</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .player-container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .player-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .info-panel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .movie-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+
+        .movie-info h2 {
+            margin-bottom: 15px;
+            color: #fdbb2d;
+        }
+
+        .details {
+            list-style: none;
+        }
+
+        .details li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .details strong {
+            min-width: 120px;
+            display: inline-block;
+            color: #fdbb2d;
+        }
+
+        .related-movies {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .related-movies h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fdbb2d;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-card {
+            background: rgba(50, 50, 50, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .movie-card h3 {
+            padding: 10px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .info-panel {
+                flex-direction: column;
+            }
+
+            .movie-info {
+                min-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Фишер</h1>
+            <p class="description">Захватывающая драма о жизни и карьере легендарного шахматиста Бобби Фишера. Фильм переносит зрителя в напряженную атмосферу мировых шахматных турниров и раскрывает сложную личность гения.</p>
+        </header>
+
+        <div class="player-container">
+            <div class="player-wrapper">
+                <iframe
+                    title="Фишер"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture;"
+                    src="https://tori-as.stloadi.live/?token_movie=09b81ff71999ad7d2b241385bff7bd&amp;token=4ecf0cd28bdfbd8ffa320e6f686992">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="movie-info">
+                <h2>О фильме</h2>
+                <ul class="details">
+                    <li><strong>Год выпуска:</strong> 2021</li>
+                    <li><strong>Страна:</strong> США</li>
+                    <li><strong>Жанр:</strong> Драма, Биография</li>
+                    <li><strong>Режиссер:</strong> Эдвард Цвик</li>
+                    <li><strong>В ролях:</strong> Тоби Магуайр, Льеви Шребер, Питер Сарсгаард</li>
+                    <li><strong>Длительность:</strong> 118 мин.</li>
+                    <li><strong>Рейтинг:</strong> IMDb: 7.2/10</li>
+                </ul>
+            </div>
+
+            <div class="movie-info">
+                <h2>Сюжет</h2>
+                <p>Фильм рассказывает о жизни Роберта Джеймса Фишера - гениального американского шахматиста, одиннадцатого чемпиона мира по шахматам. От его ранних лет и стремительного взлёта до исторического матча с Борисом Спасским в 1972 году во время Холодной войны, который принёс ему мировую известность.</p>
+                <p>Картина также исслезует тёмные стороны гения - его паранойю, эксцентричное поведение и постепенное удаление от общества, что в конечном итоге привело к его исчезновению из профессиональных шахмат и публичной жизни.</p>
+            </div>
+        </div>
+
+        <div class="related-movies">
+            <h2>Похожие фильмы</h2>
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='280' viewBox='0 0 200 280'><rect width='200' height='280' fill='%23333'/><text x='100' y='140' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'>Жертвуя пешкой</text></svg>" alt="Жертвуя пешкой">
+                    <h3>Жертвуя пешкой</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='280' viewBox='0 0 200 280'><rect width='200' height='280' fill='%23333'/><text x='100' y='140' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'>Ход королевы</text></svg>" alt="Ход королевы">
+                    <h3>Ход королевы</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='280' viewBox='0 0 200 280'><rect width='200' height='280' fill='%23333'/><text x='100' y='140' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'>Мирный воин</text></svg>" alt="Мирный воин">
+                    <h3>Мирный воин</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='280' viewBox='0 0 200 280'><rect width='200' height='280' fill='%23333'/><text x='100' y='140' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'>Игра в имитацию</text></svg>" alt="Игра в имитацию">
+                    <h3>Игра в имитацию</h3>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Киносайт. Все права защищены.</p>
+            <p>Внимание: данный сайт предназначен только для ознакомительных целей.</p>
+        </footer>
+    </div>
+</body>
+</html>
